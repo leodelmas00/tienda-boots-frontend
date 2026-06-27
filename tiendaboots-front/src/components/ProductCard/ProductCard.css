@@ -1,0 +1,33 @@
+.card {
+  margin-bottom: 20px;
+  width: 18rem;
+  background-color: var(--secondary);
+}
+
+.card-img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.card-text {
+  font-size: 0.8rem;
+}
+
+.btn-ampliar {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-ampliar:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}

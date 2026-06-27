@@ -1,0 +1,12 @@
+.hero-section {
+  background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp4160995.jpg&f=1&nofb=1&ipt=c7ea48dffce843708cb366fbd2f2839a69706a2189122ae13e346c6572372cc8")
+    center/cover no-repeat;
+
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.hero-section h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}

@@ -1,0 +1,16 @@
+.nav-link {
+  transition: color .25s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.navbar-brand {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: var(--primary);
+}
