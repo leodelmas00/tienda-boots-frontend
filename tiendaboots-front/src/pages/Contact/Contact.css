@@ -20,3 +20,14 @@
 .btn-custom:hover {
   background-color: var(--accent);
 }
+
+@media (max-width: 575.98px) {
+  .contact-card {
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+
+  .contact-card h1 {
+    font-size: 1.5rem;
+  }
+}

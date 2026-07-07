@@ -16,8 +16,6 @@ export default function ProductCard({ producto, onAmpliar }) {
         <button
           className="btn btn-ampliar"
           onClick={onAmpliar}
-          data-bs-toggle="modal"
-          data-bs-target="#productoModal"
         >
           Ampliar
         </button>

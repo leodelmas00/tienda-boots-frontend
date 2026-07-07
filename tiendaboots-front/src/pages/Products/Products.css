@@ -51,6 +51,13 @@
    NAV PILLS (DESKTOP FILTER)
 ========================= */
 
+.filter-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
 .nav-pills .nav-link {
   color: var(--text);
   background-color: transparent;
@@ -65,4 +72,10 @@
 .nav-pills .show > .nav-link {
   background-color: var(--primary);
   color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .filter-tab {
+    margin-bottom: 0.5rem;
+  }
 }

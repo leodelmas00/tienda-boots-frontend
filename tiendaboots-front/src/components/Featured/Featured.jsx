@@ -17,7 +17,7 @@ export default function Featured() {
                 className="d-block"
                 alt="Botas Timberland Earthkeepers para hombre"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h5 className="fw-bold">
                   Botas Timberland Earthkeepers para hombre
                 </h5>
@@ -34,7 +34,7 @@ export default function Featured() {
                 className="d-block"
                 alt="Botas impermeables Timberland Premium"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h5 className="fw-bold">
                   Botas impermeables Timberland Premium
                 </h5>
@@ -51,7 +51,7 @@ export default function Featured() {
                 className="d-block"
                 alt="Botas Martens Rojo Cereza Liso"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h5 className="fw-bold">
                   Botas Martens Rojo Cereza Liso
                 </h5>

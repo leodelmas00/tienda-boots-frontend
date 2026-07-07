@@ -10,3 +10,19 @@
   font-weight: 700;
   letter-spacing: -0.5px;
 }
+
+.hero-section p {
+  max-width: 500px;
+}
+
+@media (max-width: 767.98px) {
+  .hero-section h1 {
+    font-size: 2rem;
+    letter-spacing: -0.3px;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}

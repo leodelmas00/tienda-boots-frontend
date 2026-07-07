@@ -3,3 +3,10 @@
   height: 280px;
   object-fit: cover;
 }
+
+@media (max-width: 575.98px) {
+  .modal-img {
+    width: 200px;
+    height: 200px;
+  }
+}

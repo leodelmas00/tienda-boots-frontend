@@ -2,6 +2,11 @@
   margin-bottom: 20px;
   width: 18rem;
   background-color: var(--secondary);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
 }
 
 .card-img {
@@ -26,8 +31,12 @@
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   .card {
     width: 100%;
+  }
+
+  .card-img {
+    height: 20vh;
   }
 }

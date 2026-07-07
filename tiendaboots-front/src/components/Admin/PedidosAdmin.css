@@ -1,0 +1,87 @@
+.pedidos-admin .section-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pedidos-admin .table {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.pedidos-admin thead {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.pedidos-admin thead th {
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.85rem 1rem;
+  white-space: nowrap;
+}
+
+.pedidos-admin tbody tr {
+  transition: background-color 0.2s;
+}
+
+.pedidos-admin tbody tr:hover {
+  background-color: rgba(200, 162, 122, 0.1);
+}
+
+.pedidos-admin tbody td {
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.pedido-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.pedido-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.pedido-card-id {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.pedido-card-body {
+  padding: 0.75rem 1rem;
+}
+
+.pedido-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.4rem 0;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.pedido-card-row + .pedido-card-row {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pedido-card-label {
+  font-weight: 600;
+  color: var(--text);
+  opacity: 0.7;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}

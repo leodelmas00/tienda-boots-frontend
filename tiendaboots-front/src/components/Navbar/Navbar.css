@@ -14,3 +14,10 @@
 .navbar-brand:hover {
   color: var(--primary);
 }
+
+@media (max-width: 991.98px) {
+  .navbar {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Modal } from "bootstrap";
 import "./ProductModal.css";
 
@@ -21,25 +21,35 @@ export default function ProductModal({ producto, onClose }) {
   const bsModalRef = useRef(null);
   const [alertaVisible, setAlertaVisible] = useState(false);
 
+  const handleClose = useCallback(() => {
+    onClose();
+    setAlertaVisible(false);
+  }, [onClose]);
+
   // Inicializar instancia Bootstrap Modal una sola vez
   useEffect(() => {
     bsModalRef.current = new Modal(modalRef.current, { backdrop: true });
 
     const el = modalRef.current;
     const handleHidden = () => {
-      onClose();
-      setAlertaVisible(false);
+      handleClose();
       if (document.activeElement) document.activeElement.blur();
     };
+    const handleShow = () => {
+      setAlertaVisible(false);
+    };
     el.addEventListener("hidden.bs.modal", handleHidden);
-    return () => el.removeEventListener("hidden.bs.modal", handleHidden);
-  }, []);
+    el.addEventListener("show.bs.modal", handleShow);
+    return () => {
+      el.removeEventListener("hidden.bs.modal", handleHidden);
+      el.removeEventListener("show.bs.modal", handleShow);
+    };
+  }, [handleClose]);
 
   // Abrir/cerrar según si hay producto seleccionado
   useEffect(() => {
     if (!bsModalRef.current) return;
     if (producto) {
-      setAlertaVisible(false);
       bsModalRef.current.show();
     } else {
       bsModalRef.current.hide();
@@ -55,7 +65,7 @@ export default function ProductModal({ producto, onClose }) {
             <button
               type="button"
               className="btn-close"
-              data-bs-dismiss="modal"
+              onClick={() => bsModalRef.current.hide()}
             />
           </div>
 

@@ -1,0 +1,47 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-content {
+  flex: 1;
+  margin-left: 250px;
+  background-color: var(--bg);
+  min-height: 100vh;
+}
+
+.admin-main {
+  padding: 2rem;
+}
+
+@media (max-width: 1199.98px) {
+  .admin-main {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .admin-content {
+    margin-left: 0;
+  }
+
+  .admin-main {
+    padding: 1rem;
+  }
+}
+
+.offcanvas .admin-sidebar {
+  display: flex !important;
+  position: static;
+  min-height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .offcanvas {
+    width: 100% !important;
+  }
+
+  .offcanvas .admin-sidebar {
+    width: 100% !important;
+  }
+}

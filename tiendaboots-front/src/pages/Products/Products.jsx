@@ -148,10 +148,10 @@ export default function Products() {
         </div>
 
         {/* Grid de productos */}
-        <div style={{ flex: 2, maxWidth: "90%" }}>
+        <div className="flex-grow-1">
           <div className="row">
             {productosFiltrados.map((producto) => (
-              <div className="col mb-4" key={producto.id}>
+              <div className="col-12 col-sm-6 col-lg-4 mb-4" key={producto.id}>
                 <ProductCard
                   producto={producto}
                   onAmpliar={() => setProductoSeleccionado(producto)}

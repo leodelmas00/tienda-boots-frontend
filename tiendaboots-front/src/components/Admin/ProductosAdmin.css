@@ -1,0 +1,202 @@
+.productos-admin .section-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.btn-add {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.25s;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.table-productos {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.table-productos thead {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.table-productos thead th {
+  border: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.85rem 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.table-productos tbody tr {
+  transition: background-color 0.2s;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.table-productos tbody tr:hover {
+  background-color: rgba(200, 162, 122, 0.1);
+}
+
+.table-productos tbody td {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.table-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--secondary);
+}
+
+.td-desc {
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.82rem;
+}
+
+.toast-admin {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  z-index: 3000;
+  animation: slideInToast 0.3s ease;
+}
+
+.toast-admin-success {
+  background-color: var(--primary);
+}
+
+.toast-admin-danger {
+  background-color: #dc3545;
+}
+
+@keyframes slideInToast {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.producto-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.producto-card-img {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.producto-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.producto-card-img .badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.producto-card-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.producto-card-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.35rem;
+  line-height: 1.3;
+}
+
+.producto-card-desc {
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.7;
+  margin: 0 0 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.producto-card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.producto-card-price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.producto-card-color {
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.producto-card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .btn-add span {
+    display: none;
+  }
+
+  .btn-add {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .toast-admin {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+  }
+}
