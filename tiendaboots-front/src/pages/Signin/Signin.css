@@ -1,0 +1,35 @@
+.signin-btn {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.signin-btn:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.signin-btn:active {
+  background-color: #6d452b;
+  border-color: #6d452b;
+}
+
+.signin-btn:focus,
+.signin-btn:focus-visible,
+.signin-btn:active,
+.signin-btn:active:focus {
+  background-color: #6d452b;
+  border-color: #6d452b;
+  box-shadow: none;
+}
+
+.input-dark {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .card.w-50 {
+        width: 90% !important;
+        padding: 2rem !important;
+    }
+}
