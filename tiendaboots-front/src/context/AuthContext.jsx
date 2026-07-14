@@ -6,20 +6,21 @@ export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    async function refreshUser() {
+        const response = await fetch("http://localhost:3000/me", {
+            credentials: "include",
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            setUser(data.user);
+        }
+    }
+
     useEffect(() => {
         async function checkAuth() {
             try {
-                const response = await fetch("http://localhost:3000/me", {
-                    credentials: "include",
-                });
-
-                if (!response.ok) {
-                    setUser(null);
-                    return;
-                }
-
-                const data = await response.json();
-                setUser(data.user);
+                await refreshUser();
             } catch {
                 setUser(null);
             } finally {
@@ -50,6 +51,7 @@ export function AuthProvider({ children }) {
                 loading,
                 login,
                 logout,
+                refreshUser,
             }}
         >
             {children}

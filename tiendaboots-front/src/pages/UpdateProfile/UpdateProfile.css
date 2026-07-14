@@ -1,0 +1,31 @@
+.profile-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.update-profile-picture {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #dee2e6;
+}
+
+
+.uploadBtn,
+.uploadBtn:focus,
+.uploadBtn:focus-visible,
+.uploadBtn:active,
+.uploadBtn:active:focus {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: none;
+}
+
+.uploadBtn:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}

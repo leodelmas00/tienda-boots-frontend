@@ -1,18 +1,22 @@
 import { Link, useNavigate } from 'react-router-dom'
 import './Navbar.css'
-import profileImage from "../../assets/genericPP.webp";
+import genericPP from "../../assets/genericPP.webp";
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 
 export default function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   async function handleLogout() {
     await logout();
     navigate("/");
+  }
+
+  async function handleUpdateProfile() {
+    navigate("/UpdateProfile");
   }
   
   return (
@@ -52,15 +56,19 @@ export default function Navbar() {
 
             <li className="nav-item ms-3 profile-menu">
               <img
-                src={profileImage}
-                alt="Perfil"
-                className="profile-picture"
-                onClick={() => setMenuOpen(!menuOpen)}
+                  src={
+                      user?.foto_perfil
+                          ? `http://localhost:3000/${user.foto_perfil}`
+                          : genericPP
+                  }
+                  alt="Perfil"
+                  className="profile-picture"
+                  onClick={() => setMenuOpen(!menuOpen)}
               />
 
               {menuOpen && (
                 <div className="profile-dropdown shadow">
-                  <button className="profile-dropdown-item">
+                  <button className="profile-dropdown-item" onClick={handleUpdateProfile}>
                     Actualizar perfil
                   </button>
 

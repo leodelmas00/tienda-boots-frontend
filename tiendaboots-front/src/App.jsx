@@ -9,9 +9,11 @@ import Signin from './pages/Signin/Signin';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import Products from './pages/Products/Products';
+import UpdateProfile from './pages/UpdateProfile/UpdateProfile';
 
 import ProtectedRoute from './components/ProtectedRoute';
 import NavbarWrapper from './components/NavbarWrapper';
+import FooterWrapper from './components/FooterWrapper';
 
 function App() {
     return (
@@ -31,8 +33,12 @@ function App() {
                 <Route path="/Home" element={ <ProtectedRoute> <Home /> </ProtectedRoute>} />
                 <Route path="/Contact" element={ <ProtectedRoute> <Contact /> </ProtectedRoute> }/>
                 <Route path="/Products" element={ <ProtectedRoute> <Products /> </ProtectedRoute> } />
+                <Route path="/UpdateProfile" element={ <ProtectedRoute> <UpdateProfile /> </ProtectedRoute> } />
 
             </Routes>
+
+            <FooterWrapper />
+
         </BrowserRouter>
     );
 }
