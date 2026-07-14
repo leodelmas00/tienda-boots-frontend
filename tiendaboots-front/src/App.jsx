@@ -1,46 +1,40 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './styles/reset.css'
-import './styles/global.css'
-import './styles/variables.css'
-import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Footer/Footer'
 
-import Login from './pages/Login/Login'
-import Signin from './pages/Signin/Signin'
-import Home from './pages/Home/Home'
-import Contact from './pages/Contact/Contact'
-import Products from './pages/Products/Products'
+import './styles/reset.css';
+import './styles/global.css';
+import './styles/variables.css';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/Signin" element={<Signin />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Products" element={<Products />} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
+import Login from './pages/Login/Login';
+import Signin from './pages/Signin/Signin';
+import Home from './pages/Home/Home';
+import Contact from './pages/Contact/Contact';
+import Products from './pages/Products/Products';
 
-export default App
-
-/*
+import ProtectedRoute from './components/ProtectedRoute';
+import NavbarWrapper from './components/NavbarWrapper';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Products" element={<Products />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  )
+    return (
+        <BrowserRouter>
+
+            <NavbarWrapper />
+
+            <Routes>
+
+                {/* Rutas públicas */}
+
+                <Route path="/" element={<Login />} />
+                <Route path="/Login" element={<Login />} />
+                <Route path="/Signin" element={<Signin />} />
+
+                {/* Rutas privadas */}
+                <Route path="/Home" element={ <ProtectedRoute> <Home /> </ProtectedRoute>} />
+                <Route path="/Contact" element={ <ProtectedRoute> <Contact /> </ProtectedRoute> }/>
+                <Route path="/Products" element={ <ProtectedRoute> <Products /> </ProtectedRoute> } />
+
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-*/
+export default App;
